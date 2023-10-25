@@ -1,0 +1,742 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+body{
+    background: #f0f2f5;
+    color: #5f5f5f;
+    width: 100%;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+}
+
+
+.navbar{
+    height: 60px;
+    width: 100%;
+    /* margin-left: 30px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    padding: 6px 6%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+.logo{
+    font-size: 30px;
+    font-style: italic;
+    color: orangered;
+}
+
+.search-bar{
+    height: 30px;
+    width: 400px;
+    border-radius: 5px;
+    background-color: #EEEEEE;
+    border-style: none;
+    padding-left: 20px;
+    outline: none;
+}
+.navbar-right{
+    margin-right: -30px;
+}
+
+.navbar-right ul li{
+    display: inline-flex;
+    list-style: none;
+    margin-left: 10px;
+    background: #f0f2f5;
+    height:30px ;
+    width: 30px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.navbar-right ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 100%; /* Set the height to 100% to center vertically */
+}
+
+/* if there is any text beside icons */
+/* .navbar-right ul li a{
+    display: flex;
+    align-items: center;
+    margin: 5px 8px;
+    padding-right: 5px;
+
+} */
+nav .navbar-right ul li img{
+
+    height:70% ;
+    width: 70%;
+    object-fit: cover;
+    
+    
+    
+}
+.navbar-profile{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    background: #f0f2f5;
+    margin-left: 20px ;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.nav-profile-img{
+    height: 100%;
+    width: 35%;
+    border-radius: 20px;
+    border: 2px solid #f0f2f5;
+    
+}
+.navbar-profile .fas.fa-caret-down {
+    margin-left: 5px; /* Adjust this value for spacing */
+}
+
+.navbar-right{
+    display: flex;
+
+}
+.navbar-profile span{
+    padding-left: 1px;
+    margin-left: 3px;
+    font-size: 8px;
+    font-weight:bolder;
+    
+}
+
+/* --------------navbar end------------- */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* --------------left-side-bar-------------------- */
+ .left-side-bar{
+    position: fixed;
+    background: #fff;
+    /* top: 61px; */
+    left: 0;
+    bottom: 0;
+    /* flex-basis: 25%; */
+    width: 60px;
+    height:100% ;
+    padding: 30px 15px;
+    /* to seperate the 2 list (between all icons and lightdark icon)  */
+    /* display: flex;
+    justify-content: space-between;
+    flex-direction: column; */
+    /*time taken to expand the sidebar when hover */
+    transition: width 0.5s;
+    
+}
+.left-side-bar ul{
+    list-style: none;
+    padding: 0 15px;
+    margin-top: 50px;
+}
+.left-side-bar ul li{
+    margin-bottom: 20px;
+    /* margin: 30px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+/* .left-side-bar ul div{
+ height: 30px;
+    width: 30px;
+    background: #ccc;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    /* margin-right: 10px; */
+/* } */ 
+.left-side-bar ul li i{
+   width: 30px;
+
+   /* margin-right: 10px; */
+   /* margin-right changed to 0px afer applying hover */
+   margin-right: 0px;
+   /* object-fit: cover; */
+}
+.left-side-bar ul li p{
+    white-space: nowrap; 
+    box-sizing: border-box;
+    /* border-top: 1px solid rgba(23, 9, 9, 0.1); */
+    /* to hide the text and display when hover */
+    display: none;
+    /* border-bottom: 1px solid #ccc; */
+
+ } 
+ .left-side-bar:hover .light-dark-theme{
+    display: none;
+ }
+ .left-side-bar ul li .radio{
+
+    display: none;
+ } 
+ hr{
+    display: none;
+    
+ }
+
+ .left-side-bar:hover{
+    /* after hover the sidebar will expand to 250px */
+    width: 250px;
+    position: fixed;
+    /* justify-content: space-between; */
+ }
+ 
+ .left-side-bar:hover ul li p{
+    display: block;
+    font-size: 15px;
+    padding-bottom: 0.5px;
+    margin-bottom: -5px;
+    border-bottom: #ccc;
+    
+    /* background: blue; */
+ }
+ .left-side-bar ul .bgcolor-change:hover{
+    /* background: rgb(0, 0, 106); */
+    background: rgb(20, 58, 74);
+    height: 43px;
+    width: 220px;
+    left: 0;
+    color: white;
+
+ }
+ .left-side-bar:hover hr{
+    display: block;
+    width: 220px;
+    color: #ccc;
+    background-color: 1px solid rgba(23, 9, 9, 0.1);
+    height: 3px;
+
+ }
+ .left-side-bar:hover ul li i{
+    margin-right: 10px;
+    /* margin-top: 10px; */
+ }
+ .left-side-bar:hover ul li span{
+    font-size: 8px;
+    margin-top: 0.1px;
+    padding: 0.1px;
+
+ }
+ .left-side-bar:hover ul li{
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    /* border-top: 1px solid #ccc; */
+
+ }
+ .left-side-bar:hover .Theme{
+    justify-content: flex-start;
+    margin-top: 20px;
+    border-top: 0;
+
+ }
+
+
+.left-side-bar:hover .radio{
+    position: fixed;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+    display: block;
+    margin-top: 75px;
+}
+/* --------------main-content--------------------  */
+.main-content{
+    width: 100%;
+    height: 100%;
+    /* margin: 70px 120px; */
+    margin-top: 70px;
+    display: flex;
+    position: static;
+    justify-content: space-between;
+
+}
+.main-content-left{
+    width: 18%;
+    /* background: pink; */
+    height: 100vh;
+    margin-left: 100px;
+}
+.mainleft-weather-card{
+    background-image: url("sky.jpg");
+    height: 240px;
+    /* margin-left: 20px; */
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 2%; 
+    flex-direction: column;
+    justify-content: space-between
+
+}
+.mainleft-weather-card .day-date{
+    /* position: relative; */
+    margin-top: 10px;
+    border-radius: 4px;
+    height: 30px;
+    width: 100px;
+    background: orangered;
+    justify-content: right;
+    float: right;
+    
+}  
+.day-date-text{
+    color: white;
+    padding: 2px 3px;
+    padding-left: 20px;
+    text-align: right;
+    font-size: 10px;
+
+}
+.temperature{
+    margin-top: 86px;
+    /* padding: 10px 10px; */
+}
+.temperature h2{
+    color: white;
+    padding: 5px 10px;
+}
+.temperature p{
+    color: white;
+    font-size: 10px;
+    padding: 2px 10px;
+
+}
+.mainleft-trending{
+    margin-top: 10px;
+    background: #fff;
+    width: 100%;
+    height: 260px;
+    padding: 10px 3%;
+    border-radius: 2%; 
+    flex-direction: column;
+    justify-content: space-between
+}
+.mainleft-trending h3{
+    font-size: 14px;
+    /* font-weight: 600; */
+    color: black;
+}
+.mainleft-trending h4{
+    font-size: 12px;
+    color: black;
+}
+.mainleft-trending ul{
+    list-style: none;
+    margin: 15px 0;
+    border-top: 1px solid #ccc;
+}
+.mainleft-trending ul li{
+    width: 100%;
+    margin: 10px 0;
+    font-size: 10px;
+}
+
+.mainleft-trending ul li span{
+   float: right;
+  
+}
+.main-content-center{
+    width: 60%;
+    background: #fff;
+    height: 100vh;
+    margin-left: 10px;
+}
+.posts{
+    background: #fff;
+    padding: 10px 25px 5px;
+    margin: 5px 0 15px;
+    width: 100%;
+
+}
+.post-author{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+.post-author img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.post-author h1{
+    font-size: 16px;
+    color: orangered;
+}
+.post-author h1 span{
+    font-size: 11px;
+    color: #3A82FF;
+    margin-left: 5px;
+}
+.post-author small{
+    display: block;
+    margin-bottom: -2px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #474747;
+}
+.post-author small span{
+    font-weight: 300;
+    padding-left: 3px;
+}
+.post-description .desc{
+    text-transform: capitalize;
+    font-size:18px;
+    /* margin-bottom: -5px; */
+    margin-right: 15px;
+    font-weight: 600;
+    color: #34475C;
+
+}
+.post-description .category{
+    font-size: 11px;
+    color: #3A82FF;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.post-description .p1{
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #34475C;
+}
+.post-description .link{
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.post-description .link a{
+    color: #3A82FF;
+    font-size: 11px;
+    margin-left: 5px;
+    font-size: 10px;
+}
+.post-description img{
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+}
+.post-activity{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 15px;
+}
+.post-activity-btn{
+    
+    display: flex;
+    align-items: center;
+  
+}
+
+.post-activity-btn button{
+    margin: 10px 10px;
+    padding: 0 10px;
+    height: 25px;
+    background: #fff;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 1px 1px rgba(0.2,0.2,0.2,0.2) ;
+    /* font-size: 10px; */
+    color: #5f5f5f;
+}
+.comment-box{
+    width: 100%;
+    height: 400px;
+    background: #fff;
+    margin-top: -15px;
+    padding: 10px 25px 5px;
+    
+    /* max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s; */
+    
+}
+.comment-wrap{
+    display:none;
+}
+/* .comment-box .open-comment{
+    max-height: 400px;
+} */
+
+.type-here{
+    display: flex;
+
+}
+.type-here img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 10px;
+   
+}
+.type-here input[type=text]{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #EEEEEE;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 500;
+}
+.comments{
+    display: flex;
+    margin-top: 10px;
+    
+}
+.comments img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    
+}
+.comments .comment-user{
+    background: #EEEEEE;
+    padding: 10px;
+    border-radius: 5px;
+}
+.comment-username{
+    display: flex;
+    justify-content: space-between;
+}
+.comment-username p{
+   margin-top: -10px;
+}
+.comment-username h6{
+    font-size: 15px;
+    padding-bottom: 5px;
+} 
+.comments div p{
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+/* --------------------main-content-center ends--------------------- */
+.main-content-right{
+    width: 20%;
+    /* background: yellow; */
+    height: 200vh;
+    margin-left: 10px;
+    margin-right: 100px;
+   
+}
+.main-content-right-connection{
+    width: 100%;
+    height: 350px;
+    background-color: #fff;
+    border-radius: 2%; 
+}
+.main-content-right-connection-text h3{
+    color: black;
+    font-size: 14px;
+    padding: 10px;
+
+}
+.main-content-right-connection-text ul{
+    list-style: none;
+}
+.main-content-right-connection-text ul li{
+    display: flex;
+    border-top: 1px solid #ccc;
+   padding: 10px;
+   font-size: 10px;
+}
+.main-content-right-connection-text ul li img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.main-content-right-connection-text ul li p{
+    /* text-align: center; */
+    margin-left: 5px;
+  
+}
+.main-content-right-connection-text ul li span{
+    float: right;
+    /* margin-top: -25px; */
+    margin-left: 30px;
+}
+.main-content-right-connection-text input[type=submit]{
+    height: 23px; 
+    padding: 0 5px;
+    /* background: rgb(224, 60, 68); */
+    background: #FB6242;
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+    /* box-shadow: none; */
+    cursor: pointer;
+    color: white;
+ }
+
+ .main-content-right-request{
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 2%; 
+    margin-top: 10px;
+}
+.main-content-right-request-text h3{
+    color: black;
+    font-size: 14px;
+    padding: 10px;
+
+}
+.main-content-right-request-text ul{
+    list-style: none;
+}
+.main-content-right-request-text ul li{
+   
+    border-top: 1px solid #ccc;
+   padding: 10px;
+   font-size: 10px;
+}
+.main-content-right-request-text ul li .request-user{ 
+    display: flex;
+
+}
+.main-content-right-request-text ul li .request-btns{ 
+    display: flex;
+    margin-top: 5px;
+    margin-left: 10px;
+    
+}
+.accept{
+    background: #FB6242;
+    cursor: pointer;
+    color: white;
+}
+.reject{
+    cursor: pointer;
+}
+
+.main-content-right-request-text ul li img{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.main-content-right-request-text ul li p{
+    /* text-align: center; */
+    margin-left: 5px;
+  
+}
+.main-content-right-request-text ul li span{
+    float: right;
+    /* margin-top: -25px; */
+    margin-left: 30px;
+}
+.main-content-right-request-text input[type=submit]{
+    height: 23px; 
+    width: 80px;
+    padding: 0 5px;
+    border: none;
+    border-radius: 3px;
+    font-size: 10px;
+    margin-left: 10px;
+    
+   
+ }
+
+/* ----------------right-side-bar----------------------- */
+
+
+.right-side-bar{
+    position: fixed;
+    background: #fff;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height:100% ;
+    /* padding: 30px 15px; */
+    
+}
+.right-side-bar ul{
+    margin-top: 70px;
+}
+.right-side-bar ul li{
+    list-style: none;
+   
+    /* padding-left: 10px; */
+    padding: 8px 10px;
+}
+.right-side-bar ul li img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: block;
+}
+.online{
+    position: relative;
+}
+.online::after{
+     content: '';
+     width: 7px;
+     height: 7px;
+     border: 2px solid #fff;
+     border-radius: 50%;
+     /* bottom: 0; */
+     /* left: 0; */
+     right: 13px;
+     top: 18px;
+     background: #41db51;
+     position: absolute;
+
+}
+/* --------------------footer------------------------- */
+
+footer{
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    background: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ---------------------media query ---------------------- */
+@media only screen and (max-width:600px){
+    .search-bar{
+        /* background: transparent; */
+        width: auto;
+        padding: 10px;
+        font-size: 10px;
+
+    }
+    .logo{
+        font-size: 15px;
+    }
+
+    
+}
